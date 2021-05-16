@@ -1,0 +1,33 @@
+{
+  "name": "changenow-test",
+  "version": "1.0.0",
+  "description": "test for changenow.io",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open —config ignoreTestFiles=**/*.feature testFiles=**/*.spec.js",
+    "cy:cucumber:open": "cypress open —config ignoreTestFiles=*.js testFiles=**/*.feature",
+    "cy:run": "cypress run —config ignoreTestFiles=**/*.feature testFiles=**/*.spec.js",
+    "cy:cucumber:run": "cypress run —config ignoreTestFiles=*.js testFiles=**/*.feature",
+    "mocha:merge": "mochawesome-merge \"cypress/results/*.json\" > mochawesome.json",
+    "mocha:marge": "marge mochawesome.json"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "cypress"
+  ],
+  "author": "Arthur Kashkin <adreneidos@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "7.1.0",
+    "cypress-cucumber-preprocessor": "^4.0.1",
+    "mocha": "^8.2.1",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.1.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  },
+  "devDependencies": {}
+}

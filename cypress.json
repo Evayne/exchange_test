@@ -1,0 +1,16 @@
+{
+    "baseUrl": "https://changenow.io",
+    "defaultCommandTimeout": 200000,
+    "execTimeout": 200000,
+    "pageLoadTimeout": 200000,
+    "requestTimeout": 200000,
+    "responseTimeout": 200000,
+    "testFiles": "**/*.{feature,features}",
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "reportDir": "cypress/results",
+        "overwrite": true,
+        "html": false,
+        "json": true
+    }
+}
